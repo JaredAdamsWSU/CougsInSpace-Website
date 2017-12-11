@@ -1,0 +1,2 @@
+# CougsInSpace-Website
+This website was built using components of HTML, CSS, JavaScript, and Python. Some third party tools and wrappers used include SQLAlchemy, Bootstrap, Flask, and Postman for testing the server. This website was built full-stack from scratch. I plan to use this website and it's framework as a template to implement the distributable ground communications software for the CougSat1 cube satellite during the Spring 2018 semester.
