@@ -1,0 +1,41 @@
+.jumbotron {
+	background-color: #809fff;
+	background-image: url(Stars.jpg);
+	margin: 0px;
+}
+
+body {
+	background-color: #809fff;
+	overflow-y: scroll;
+}
+
+.container {
+	float: left;
+	overflow-y: scroll;
+}
+
+h1 {
+	display: inline-block;
+}
+
+.centered{
+	text-align: center;
+	font-size: 20px;
+}
+
+.page_image {
+	text-align: center;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.post-and-content-container {
+	display: inline-block;
+	background-color: blue;
+	margin-left: 20%;
+	margin-right: 20%;
+}
+
+.side-nav {
+	width:160px;
+}
