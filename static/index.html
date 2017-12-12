@@ -1,44 +1,30 @@
 <!doctype html>
 
 <html>
-<div class="container post-container">
-	<div class="row">
-        <div class="col-md-6">
-		    <div class="panel panel-default">
-                <div class="panel-heading"><strong><a class="post-title">Post Title</a></strong></div>
-                    <div class="post-id" id="post-id">3</div>
-                    <div class="panel-body">
-                            <p class="post-body">Lorem ipsum dolor sit amet, id nec conceptam conclusionemque. Et eam tation option. Utinam salutatus ex eum. Ne mea dicit tibique facilisi, ea mei omittam explicari conclusionemque ad nobis propriae quaerendum sea. sum dolor sit amet, id nec conceptam conclusionemque.sum dolor sit amet.</p>
-                    </div>
-                <div class="panel-footer">
-                    <span class="glyphicon glyphicon-user" id="start"></span> <label id="started">By</label> <a href="#" class="team-name">Insert Team Name Here</a>
-                </div>
-            </div>
-        </div>
-	</div>
-</div>
 
   <head>
     <!-- Bootstrap Required -->
     <meta charset="utf-8"/>
-    <title>Cougs in Space</title>
-    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <title>CIS - Cougs in Space</title>
+    <link rel="icon" href="/images/CIS Logo.png"/>
     <!-- We link the CDN css files here -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
 
+
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
     crossorigin="anonymous">
-
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
     <script type="text/javascript" src="scripts/scripts.js"></script>
     <script type="text/javascript">
+
     $(function() {
     	Cougs_In_Space.start();
     });
@@ -46,19 +32,18 @@
 
     <body>
     <div class="cis">
+      <a class="page_image" style="margin-left: 90%; padding-right: 5%; margin-top: 5px; position: absolute">
+        <img src="images/CIS Logo.png" alt="Not working" style="height: 175px">
+      </a>
 	   <div class="jumbotron">
-
-        <div class="head">
-          <h1><font color="red">Cougs in Space</font></h1>
-          <a class="page_image">
-            <img src="images/CIS Logo.png" alt="Not working" style="height: 175px">
-          </a>
-        </div>
+       <div class="head">
+          <h1 style="height: 110px"><font color="red">Cougs in Space</font></h1>
+       </div>
 
         <nav class="navbar navbar-inverse col-xs-12">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#"id="Home-navbar" >Home</a>
+              <a class="navbar-brand" href="#" id="CIS-navbar" onClick="showPage(this.id)"><strong><font color="#c534e2" face="Courier New">CIS Portal</font></strong></a>
             </div>
             <ul class="nav navbar-nav">
               <li><a href="#" id="Home-navbar" onClick="showPage(this.id)">Home</a></li>
@@ -77,20 +62,29 @@
               </li>
              <li><a href="#" id="Donors-navbar" onClick="showPage(this.id)">Donors</a></li>
              <li><a href="#" id="GetInvolved-navbar" onClick="showPage(this.id)">Get Involved</a></li>
-			       <li><a href="#" id="Donate-navbar" onClick="showPage(this.id)">Donated</a></li>
+			       <li><a href="https://foundation.wsu.edu/give/?fund=a491ca66-425b-4226-8972-df2629772cb1%20&#038;utm_source=cougs-in-space&#038;utm_medium=wsu-link&#038;utm_campaign=voiland-college-of-engineering-and-architecture" id="Donate-navbar">Give Now</a></li>
 			       <li><a href="#" id="K-12-navbar" onClick="showPage(this.id)">K-12</a></li>
 			       <li><a href="#" id="About-navbar" onClick="showPage(this.id)">About</a></li>
+             <li><a href="#" id="Meet-dev-navbar" onClick="showPage(this.id)">Meet the Dev</a></li>
             </ul>
-            <form class="navbar-form navbar-right" role="search">
-                  
-                   <button type="button" class="btn btn-default sign-in"><a href="login.html">Sign In</a></button>
-                 
-                   <button type="submit" class="btn btn-default sign-out">Sign Out</button>
-                 
+            <form id="signin" class="navbar-form navbar-right" role="form">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="email" type="email" class="form-control" name="email" value="" placeholder="Email Address">                                        
+                        </div>
+
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input id="password" type="password" class="form-control" name="password" value="" placeholder="Password">                                        
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                   </form>
             </form>
           </div>
         </nav>
       </div>
+
   </head>
 
   <!-- Temporary. Content will go here. Needs to be in a different form -->
@@ -110,19 +104,19 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" id="Systems-dropdown" onClick="showPage(this.id)">Systems</a>
+				<a style="color:#42f4c2" href="#" id="Systems-dropdown" onClick="showPage(this.id)">Systems</a>
 			</li>
 			<li>
-				<a href="#" id="Power-dropdown" onClick="showPage(this.id)">Power</a>
+				<a style="color:#42f4c2" href="#" id="Power-dropdown" onClick="showPage(this.id)">Power</a>
 			</li>
 			<li>
-				<a href="#" id="Attitude-dropdown" onClick="showPage(this.id)">Attitude</a>
+				<a style="color:#42f4c2" href="#" id="Attitude-dropdown" onClick="showPage(this.id)">Attitude</a>
 			</li>
 			<li>
-				<a href="#" id="Structures-dropdown" onClick="showPage(this.id)">Structures</a>
+				<a style="color:#42f4c2" href="#" id="Structures-dropdown" onClick="showPage(this.id)">Structures</a>
 			</li>
 			<li>
-				<a href="#" id="Thermal-dropdown" onClick="showPage(this.id)">Thermal</a>
+				<a style="color:#42f4c2" href="#" id="Thermal-dropdown" onClick="showPage(this.id)">Thermal</a>
 			</li>
       <li>
         <a href="#" id="Create-dropdown" onClick="showPage(this.id)">Post an Update</a>
@@ -139,102 +133,110 @@
 		<div class="card-container">
 			<div class="card">
 			  <div class="card-body home-page">
-          <p class="centered" style="font-size:250%"><strong>Welcome to Cougs in Space Website</strong></p>
           <a class="page_image col-md-12">
-            <img src="images/Cube_Sat.jpeg" alt="Not working" style="height: 175px">
+            <img src="images/CIS Logo.png" alt="Not working" style="height: 250px">
           </a>
-				<p style="font-size:125%">Cougs in Space is Washington State University’s first student organization aimed at space exploration.
+          <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Welcome to Cougs in Space at Washington State University!</font></strong></p>
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">Cougs in Space is Washington State University’s first student organization aimed at space exploration.
         CougSat I is a 1U class satellite, a 1.3kg satellite that aims to communicate to WSU in orbit and take pictures of Earth.
-        By designing, launching, and maintaining CougSat I, we hope to create a lasting organization where undergraduate engineers and scientists can come to learn, enhance their skill set, and most importantly contribute to an idea that they love.</p>
+        By designing, launching, and maintaining CougSat I, we hope to create a lasting organization where undergraduate engineers and scientists can come to learn, enhance their skill set, and most importantly contribute to an idea that they love.</font></strong></p>
 			  </div>
 			</div>
 
 			<div class="card">
 			  <div class="card-body team-page">
-          <p class="centered" style="font-size:250%"><strong>Our Teams</strong></p>
+          <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Our Teams</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Team_Photo.jpg" alt="Not working" style="height: 175px">
           </a>
-				<p style="font-size:125%">We have 5 main teams for our club. Please click on the specific team to see their content, their updates and descriptions.
-        The teams are: Systems, Power, Attitude, Structures, and Thermal.</p>
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">We have 5 main teams for our club. Please click on the specific team to see their content, their updates and descriptions.
+        The teams are: Systems, Power, Attitude, Structures, and Thermal.</font></strong></p>
 			  </div>
 			</div>
 
 			<div class="card">
 			  <div class="card-body donors-page">
-          <p class="centered" style="font-size:250%"><strong>Donors</strong></p>
+          <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Donors</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Money.jpeg" alt="Not working" style="height: 175px">
           </a>
-				<p style="font-size:125%">As a company or organization, your large donations are invaluable to us. Corporate donations are not only a great way to advertise (we will put your logo on our shirts and name on a plaque), but are a great way to strengthen your connection to the University.
-        By donating you will help fund the engineering process that will prepare your future interns or graduate hires with real world and complex project experience.</p>
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">As a company or organization, your large donations are invaluable to us. Corporate donations are not only a great way to advertise (we will put your logo on our shirts and name on a plaque), but are a great way to strengthen your connection to the University.
+        By donating you will help fund the engineering process that will prepare your future interns or graduate hires with real world and complex project experience.</font></strong></p>
         </div>
 			</div>
 
 			<div class="card">
 			  <div class="card-body get-involved-page">
-          <p class="centered" style="font-size:250%"><strong>Get Involved</strong></p>
+          <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Get Involved</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Get_Involved.png" alt="Not working" style="height: 175px">
           </a>
-				<p style="font-size:125%">Cougs in Space meet at the WSU Pullman Campus on Wednesdays and Sundays.
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">Cougs in Space meet at the WSU Pullman Campus on Wednesdays and Sundays.
         On Wednesday’s we hold an informational update meeting in The SPARK, room 223, from 5:30 – 7:00PM.
         On Sunday, we hold an engineering meeting designed to let teams work in a creative and constructive atmosphere.
-        Meetings on Sundays are held in the Frank Innovation Zone in Dana Hall, from 2:00 – 3:30PM. These meetings are open to anybody!</p>
+        Meetings on Sundays are held in the Frank Innovation Zone in Dana Hall, from 2:00 – 3:30PM. These meetings are open to anybody!</font></strong></p>
 			  </div>
 			</div>
 
 			<div class="card">
 			  <div class="card-body donate-page">
-          <p class="centered" style="font-size:250%"><strong>Donated</strong></p>
+          <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Give Now</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Money.jpeg" alt="Not working" style="height: 175px">
           </a>
-				<p style="font-size:125%">Without a shadow of a doubt launching a satellite is an expensive process. From purchasing a ceramic capacitor to using a state of the art clean room  at $4,000 a month, a large chunk of change is required.
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">Without a shadow of a doubt launching a satellite is an expensive process. From purchasing a ceramic capacitor to using a state of the art clean room  at $4,000 a month, a large chunk of change is required.
         The following companies, organizations, and individuals have already assisted us in pursuing our goal of space flight, and we cannot thank them enough.
         Aaron S. Crandall, PH.D. WSU Department of Electrical Engineering and Computer Science.
         The Boeing Company
-        Rigol</p>
+        Rigol</font></strong></p>
 			  </div>
 			</div>
 
 			<div class="card">
 			  <div class="card-body k-12-page">
-        <p class="centered" style="font-size:250%"><strong>K-12</strong></p>
+          <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">K-12</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/K12_logo.png" alt="Not working" style="height: 175px">
           </a>
-				<p style="font-size:125%">Cougs in Space is actively seeking to teach others about what we are learning as we go.
+        <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">Cougs in Space is actively seeking to teach others about what we are learning as we go.
         A big part of our mission is K-12 outreach so we can get students of all ages interested in space.
         What we are looking to do is provide hands on workshops, presentations, or just talks intended to spark an interest in space and engineering.
-        If you would like to find out more and arrange a meeting please send us a message!</p>
+        If you would like to find out more and arrange a meeting please send us a message!</font></strong></p>
 			  </div>
 			</div>
 
 			<div class="card">
 			  <div class="card-body about-page">
-        <p class="centered" style="font-size:250%"><strong>About Us</strong></p>
+        <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">About Us</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/CIS_Team_Photo.jpg" alt="Not working" style="height: 175px">
           </a>
-				<p style="font-size:125%">Split into teams to design and implement the Power System, Attitude Control, Communication System, Thermal Analysis, and Structure Design, we ensure that the basic requirements to launch a satellite are met.
+        <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">Split into teams to design and implement the Power System, Attitude Control, Communication System, Thermal Analysis, and Structure Design, we ensure that the basic requirements to launch a satellite are met.
         If you are interested in learning more about our teams, or a specific team, please check out Our Teams page!
         Dubbed CougSat I, this will be WSU’s foot in the door to the space industry. Set to launch ideally in 2019, this spacecraft will be equipped with a self-made Structure, set of Magnetorquers, Power System, Communication System, and more.
         The satellite will endure freezing temperatures, extreme heat, out of control spinning, and constant power limitations due to its size.
         Through clever engineering and dedicated teamwork, soon there will be a Cougar Logo orbiting earth.
-        Cougs in Space meet at the WSU Pullman Campus on Wednesdays and Sundays.</p>
+        Cougs in Space meet at the WSU Pullman Campus on Wednesdays and Sundays.</font></strong></p>
 			  </div>
 			</div>
 
+      <div class="card"> <!-- Begin Developer Content Container -->
+        <div class="card-body meet-dev-page">
+        <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Meet the Developer</font></strong></p>
+        <div class="LI-profile-badge centered"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="jaredstrand"><a class="LI-simple-link" href='https://www.linkedin.com/in/jaredstrand?trk=profile-badge'>Jared Strand</a></div>
+        <p style="font-size:125%"></p>
+        </div>
+      </div> <!-- End Developer Content Container -->
+
 			<div class="card"> <!-- Begin Systems Content Container -->
 			  <div class="card-body systems-page">
-          <p class="centered" style="font-size:250%"><strong>Team Systems</strong></p>
+           <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Systems Integration and Ground Control</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Team_Systems.jpg" alt="Not working" style="height: 175px">
           </a>
-          <p style="font-size:125%">The ground control and systems integration team is fully responsible for the multi-module integration of all major cube sat sub-systems as well as the entire ground to satellite communications API.
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">The ground control and systems integration team is fully responsible for the multi-module integration of all major cube sat sub-systems as well as the entire ground to satellite communications API.
           On the ground control side, our goal is to build and design an involved and extremely functional API that will be operated by the chief ground communications operator throughout the life span of the cube satellite.
-          Our ground control API will have many features and nuances that will define what kinds of data, commands, telemetry, and operational status information we would like to send and receive from our satellite throughout the project.</p>
+          Our ground control API will have many features and nuances that will define what kinds of data, commands, telemetry, and operational status information we would like to send and receive from our satellite throughout the project.</font></strong></p>
 				<div class="systems-posts-container">
 				Inject 5 posts here
 			  	</div>
@@ -243,15 +245,15 @@
 
 			<div class="card"> <!-- Begin power Content Container -->
 			  <div class="card-body power-page">
-          <p class="centered" style="font-size:250%"><strong>Team Power</strong></p>
+           <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Power Team</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Team_Power.jpg" alt="Not working" style="height: 175px">
           </a>
-          <p style="font-size:125%">The power systems team is responsible for the generation, management, and distribution of power to all of the loads found on the cubesat.
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">The power systems team is responsible for the generation, management, and distribution of power to all of the loads found on the cubesat.
           Power generation is centered around harvesting energy from the sun through the use of high-efficiency solar panels mounted on the outside faces of the cubesat.
           Power management consists of regulating the generated power to ensure that each load is supplied with an adequate amount of power with the desired characteristics (voltage, current, etc.) needed for proper operation.
           High energy density batteries are also to be used to store power for when the cubesat is not receiving sunlight.
-          Power distribution involves switching power to the various loads at the desired operation times such that power can be supplied reliably and efficiently to ensure optimal operation while also conserving power for high-priority loads.</p>
+          Power distribution involves switching power to the various loads at the desired operation times such that power can be supplied reliably and efficiently to ensure optimal operation while also conserving power for high-priority loads.</font></strong></p>
 				<div class="power-posts-container">
 				Inject 5 posts here
 			  	</div>
@@ -260,13 +262,13 @@
 
 			<div class="card"> <!-- Begin attitude Content Container -->
 			  <div class="card-body attitude-page">
-          <p class="centered" style="font-size:250%"><strong>Team Attitude</strong></p>
+           <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Attitude Determination Team</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Team_Controls_Communication.jpg" alt="Not working" style="height: 175px">
           </a>
-          <p style="font-size:125%">On the on-board systems and integration side, we are highly motivated on completely developing an in house total flight control and analysis software that will enable us to communicate directly with all integrated subsystems developed by the other teams.
+        <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">On the on-board systems and integration side, we are highly motivated on completely developing an in house total flight control and analysis software that will enable us to communicate directly with all integrated subsystems developed by the other teams.
           We are striving to build the bridge between all devices, both physically and abstractly, that will enable complete device comprehension and coherence.
-          We expect that this will allow for all-inclusive control and communication between our primary ground control station and all centralized on-board systems and subsystems.</p>
+          We expect that this will allow for all-inclusive control and communication between our primary ground control station and all centralized on-board systems and subsystems.</font></strong></p>
 				<div class="attitude-posts-container">
 				Inject 5 posts here
 			  	</div>
@@ -275,14 +277,14 @@
 
 			<div class="card"> <!-- Begin structures Content Container -->
 			  <div class="card-body structures-page">
-          <p class="centered" style="font-size:250%"><strong>Team Structures</strong></p>
+           <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Structures Team</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Team_Structures.jpg" alt="Not working" style="height: 175px">
           </a>
-          <p style="font-size:125%">The Structures team is primarily made up of Mechanical and Material Science Engineering majors and has the responsibility of managing the physical needs of the club.
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">The Structures team is primarily made up of Mechanical and Material Science Engineering majors and has the responsibility of managing the physical needs of the club.
           Apart from the CubeSat frame, we will design and build any other needed structures, such as joints, fastenings, deployables, and mountings for both the spacecraft and for testing purposes.
           We must ensure the physical durability of the craft by following the required standards and by modeling and testing the vibration response from launch vehicle specifications.
-          We are composing CAD models of all spacecraft components and managing the mass budget, while also controlling volume allocation.</p>
+          We are composing CAD models of all spacecraft components and managing the mass budget, while also controlling volume allocation.</font></strong></p>
 				<div class="structures-posts-container">
 				Inject 5 posts here
 			  	</div>
@@ -291,13 +293,13 @@
 
 			<div class="card"> <!-- Begin thermal Content Container -->
 			  <div class="card-body thermal-page">
-          <p class="centered" style="font-size:250%"><strong>Team Thermal</strong></p>
+           <p class="centered" style="font-size:300%; color:#42f4c2"><strong><font face="Courier New">Thermal Team</font></strong></p>
           <a class="page_image col-md-12">
             <img src="images/Team_Thermal.jpg" alt="Not working" style="height: 175px">
           </a>
-          <p style="font-size:125%">The primary goal of the Thermal Systems team is to protect the satellite from the extremely harsh conditions of space.
+          <p align="left" style="font-size:125%; color:#42f4c2"><strong><font face="Courier New">The primary goal of the Thermal Systems team is to protect the satellite from the extremely harsh conditions of space.
           Our plan is to maintain the satellites longevity throughout the mission by protecting all components within our cubesat.
-          To ensure survivability, we are researching and testing material that will combat the rapid and intense temperature changes, extreme radiation, and the thermal expansion of the cubesat in space.</p>
+          To ensure survivability, we are researching and testing material that will combat the rapid and intense temperature changes, extreme radiation, and the thermal expansion of the cubesat in space.</font></strong></p>
 				<div class="thermal-posts-container">
 				Inject 5 posts here
 			  	</div>
@@ -308,11 +310,11 @@
       <div class="card-body create-page">
         <form class="share-post">
           <div class="form-group">
-            <label for="exampleFormControlInput1">Post Title</label>
-            <input class="form-control createTitle" placeholder="Title">
+            <label for="exampleFormControlSelect1" style="color:#42f4c2"><strong><font face="Courier New">Post Title</font></strong></label>
+            <input class="form-control createTitle" placeholder="Title"></input>
           </div>
           <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
+            <label for="exampleFormControlSelect1" style="color:#42f4c2"><strong><font face="Courier New">Team Select</font></strong></label>
             <select class="form-control teamSelect">
               <option>Systems</option>
               <option>Power</option>
@@ -322,11 +324,11 @@
             </select>
           </div>
           <div class="form-group">
-              <label for="exampleFormControlTextarea1">Post Body</label>
-              <textarea class="form-control postBody" rows="5"></textarea>
+              <label for="exampleFormControlSelect1" style="color:#42f4c2"><strong><font face="Courier New">Post Body</font></strong></label>
+              <textarea class="form-control postBody" placeholder="Body" rows="5"></textarea>
           </div>
-          <button class="btn btn-primary cancel">Cancel</button>
           <button class="btn btn-primary submit" type="submit">Submit</button>
+          <button class="btn btn-primary cancel">Cancel</button>
         </form>
       </div>
     </div>
@@ -338,4 +340,20 @@
 
 </div>
 </body>
+<div class="container post-container">
+  <div class="row">
+        <div class="col-md-6">
+        <div class="panel panel-default">
+                <div class="panel-heading"><strong><a class="post-title">Post Title</a></strong></div>
+                    <div class="post-id" id="post-id">3</div>
+                    <div class="panel-body">
+                            <p class="post-body">Lorem ipsum dolor sit amet, id nec conceptam conclusionemque. Et eam tation option. Utinam salutatus ex eum. Ne mea dicit tibique facilisi, ea mei omittam explicari conclusionemque ad nobis propriae quaerendum sea. sum dolor sit amet, id nec conceptam conclusionemque.sum dolor sit amet.</p>
+                    </div>
+                <div class="panel-footer">
+                    <span class="glyphicon glyphicon-user" id="start"></span> <label id="started">By</label> <a href="#" class="team-name">Insert Team Name Here</a>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
 </html>

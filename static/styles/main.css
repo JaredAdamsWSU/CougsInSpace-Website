@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #809fff;
+	background-color: #293ad1; /*#809fff;*/
 	overflow-y: scroll;
 }
 
@@ -38,4 +38,14 @@ h1 {
 
 .side-nav {
 	width:160px;
+}
+
+.linkedin {
+	display: inline-block;
+	overflow: hidden;
+}
+
+img.resize {
+  max-width:50%;
+  max-height:50%;
 }

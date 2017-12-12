@@ -177,7 +177,6 @@ var Cougs_In_Space = (function() {
         post.html('');
 
         displayPosts();
-        console.log('we reached after display posts');
         attachCreateHandler();
     };
 
@@ -193,10 +192,14 @@ function showPage(id) {
     cis = $(".cis");
     if (id == 'Home-navbar') {
          cis.find('.home-page').show();
-         //find the nav bar element and add the active class
     } else {
          cis.find('.home-page').hide();
     }
+    // if (id == 'CIS-navbar') {
+    //      cis.find('.home-page').show();
+    // } else {
+    //      cis.find('.home-page').hide();
+    // }
     if (id == 'Our-Teams') {
         cis.find('.team-page').show();
     } else {
@@ -251,6 +254,11 @@ function showPage(id) {
         cis.find('.about-page').show();
     } else {
         cis.find('.about-page').hide();
+    }
+    if (id == 'Meet-dev-navbar') {
+        cis.find('.meet-dev-page').show();
+    } else {
+        cis.find('.meet-dev-page').hide();
     }
     if (id == 'Create-dropdown') {
         cis.find('.create-page').show();
